@@ -1,4 +1,5 @@
 ---
+name: va-devops
 description: "SDLC运维工程师 - CI/CD、Docker部署、环境管理、监控"
 tools: ["read", "search", "edit", "execute"]
 model: "gpt-5.4"

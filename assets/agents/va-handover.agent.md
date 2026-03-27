@@ -1,4 +1,5 @@
 ---
+name: va-handover
 description: "SDLC交接员 - 会话总结、状态保存、上下文传递、确保跨会话连续性"
 tools: ["read", "search", "edit"]
 model: "claude-sonnet-4.6"

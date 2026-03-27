@@ -1,4 +1,5 @@
 ---
+name: va-tester
 description: "SDLC测试工程师 - 测试策略、用例编写、自动化测试、E2E测试"
 tools: ["read", "search", "edit", "execute"]
 model: "claude-sonnet-4.6"

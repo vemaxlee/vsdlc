@@ -25,4 +25,4 @@ agent: "va-pm"
 6. **问题处理**: 遇到阻塞时先自动修复，再自动委派更合适的代理/子代理继续推进
 7. **人工介入门槛**: 仅在必须人工决策时使用 `vscode_askQuestions` 对话框，且必须提供 `稍后处理` 选项
 
-如果是全新项目 (没有 `docs/project-state.md`)，告知用户先运行 `/sdlc-init` 命令来初始化项目结构。
+如果当前项目未接入或只部分接入 SDLC（例如缺少 `docs/project-state.md`、`docs/session-handover/latest.md`、`.github/copilot-instructions.md` 中的关键项），优先告知用户先运行 `/sdlc-load` 自动识别并补齐；只有明确是空白新项目时，才建议使用 `/sdlc-init`。

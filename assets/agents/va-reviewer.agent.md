@@ -1,4 +1,5 @@
 ---
+name: va-reviewer
 description: "SDLC代码审查员 - 代码质量审查、安全审计、API契约合规检查"
 tools: ["read", "search"]
 model: "gpt-5.4"

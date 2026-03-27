@@ -1,4 +1,5 @@
 ---
+name: va-architect
 description: "SDLC架构师 - 系统设计、技术选型、API契约定义、架构文档"
 tools: ["read", "search", "edit", "web"]
 model: "claude-opus-4.6"

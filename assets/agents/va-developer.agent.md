@@ -1,4 +1,5 @@
 ---
+name: va-developer
 description: "SDLC开发者 - 代码实现、重构、Bug修复、遵循API契约和编码规范"
 tools: ["read", "search", "edit", "execute"]
 model: "gpt-5.3-codex"

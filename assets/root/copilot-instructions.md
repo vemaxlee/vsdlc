@@ -61,6 +61,7 @@
 
 ## 可用命令 (Prompt)
 - `/sdlc-init` — 初始化 SDLC 项目结构（路由到 @va-pm）
+- `/sdlc-load` — 载入旧项目，自动识别/补齐 SDLC 后继续开发（路由到 @va-pm）
 - `/session-start` — 开始工作会话，加载项目/交接上下文（路由到 @va-pm）
 - `/session-end` — 结束工作会话，保存进度和状态（路由到 @va-handover）
 

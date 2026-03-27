@@ -1,4 +1,5 @@
 ---
+name: va-pm
 description: "SDLC项目经理 - 需求分析、任务拆分、进度跟踪、跨角色协调"
 tools: ["read", "search", "edit", "agent", "web", "todo"]
 model: "claude-opus-4.6"
