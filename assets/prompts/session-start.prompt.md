@@ -7,6 +7,11 @@ agent: "va-pm"
 
 请执行以下步骤来初始化本次工作会话:
 
+0. **先做接入检测并自动分流**:
+   - 检查 `.github/copilot-instructions.md`、`docs/project-state.md`、`docs/session-handover/latest.md`、`docs/task-todo/` 是否存在
+   - 如果任一关键项缺失，直接执行与 `/sdlc-load` 等价的流程（识别是旧项目半接入/未接入，自动补齐后再继续本命令后续步骤）
+   - 仅当明确是空白新项目（几乎无业务代码且无需求资料）时，才建议 `/sdlc-init`
+
 1. **读取项目状态**: 查看 `docs/project-state.md`
 2. **读取交接文档**: 查看 `docs/session-handover/latest.md`
 3. **检查待办任务**: 扫描 `docs/task-todo/` 下的所有任务
@@ -25,4 +30,4 @@ agent: "va-pm"
 6. **问题处理**: 遇到阻塞时先自动修复，再自动委派更合适的代理/子代理继续推进
 7. **人工介入门槛**: 仅在必须人工决策时使用 `vscode_askQuestions` 对话框，且必须提供 `稍后处理` 选项
 
-如果当前项目未接入或只部分接入 SDLC（例如缺少 `docs/project-state.md`、`docs/session-handover/latest.md`、`.github/copilot-instructions.md` 中的关键项），优先告知用户先运行 `/sdlc-load` 自动识别并补齐；只有明确是空白新项目时，才建议使用 `/sdlc-init`。
+注意：不要把“让用户先跑 `/sdlc-load`”当成默认回复。应优先由当前流程自动完成等价动作；只有需要用户确认关键分支时才弹对话框。

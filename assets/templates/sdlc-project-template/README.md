@@ -9,6 +9,7 @@
 
 ## SDLC 工作流
 
+- `/sdlc-load` 旧项目接入/补齐并继续开发
 - `/session-start` 开始工作会话
 - `/session-end` 结束工作会话
 - `@va-pm` 管理需求和任务

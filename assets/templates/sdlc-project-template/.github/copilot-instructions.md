@@ -12,6 +12,7 @@
 - 使用 `@va-pm` 管理需求、`@va-architect` 设计架构、`@va-developer` 编码、`@va-tester` 测试、`@va-reviewer` 审查、`@va-devops` 部署
 - 每次会话结束前运行 `/session-end`
 - 每次会话开始时运行 `/session-start`
+- 若在旧项目中补接入 SDLC，优先使用 `/sdlc-load` 自动识别与补齐
 
 ## 核心原则
 - API Contract-First
