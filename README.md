@@ -41,6 +41,25 @@ powershell -ExecutionPolicy Bypass -File .\install.ps1
 bash scripts/health-check.sh
 ```
 
+## 一键升级
+
+### WSL2 / Linux
+
+```bash
+bash scripts/update.sh
+```
+
+### Windows PowerShell
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\update.ps1
+```
+
+说明：
+- 若当前目录已配置 Git 远程，会先执行 `git pull --ff-only` 获取最新版本
+- 随后自动执行安装脚本完成覆盖升级
+- 全程保留备份，可用回滚脚本恢复
+
 ## 回滚
 
 ```bash

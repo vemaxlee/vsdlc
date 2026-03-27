@@ -8,6 +8,7 @@
     "templates": 1,
     "binScripts": 1,
     "healthChecks": 2,
+    "updateScripts": 2,
     "rollbackScripts": 2
   },
   "entrypoints": [
