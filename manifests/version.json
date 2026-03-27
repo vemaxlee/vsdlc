@@ -4,7 +4,7 @@
   "releasedAt": "2026-03-27",
   "components": {
     "agents": 7,
-    "promptsAndInstructions": 9,
+    "promptsAndInstructions": 8,
     "templates": 1,
     "binScripts": 1,
     "healthChecks": 2,
@@ -12,7 +12,6 @@
     "rollbackScripts": 2
   },
   "entrypoints": [
-    "/sdlc-int",
     "/sdlc-init",
     "/session-start",
     "/session-end"

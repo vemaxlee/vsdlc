@@ -61,7 +61,6 @@
 
 ## 可用命令 (Prompt)
 - `/sdlc-init` — 初始化 SDLC 项目结构（路由到 @va-pm）
-- `/sdlc-int` — 智能初始化入口：先选择需求文档来源，再推断并确认项目类型、推荐并确认技术栈，后续沿用 `/sdlc-init` 流程（路由到 @va-pm）
 - `/session-start` — 开始工作会话，加载项目/交接上下文（路由到 @va-pm）
 - `/session-end` — 结束工作会话，保存进度和状态（路由到 @va-handover）
 

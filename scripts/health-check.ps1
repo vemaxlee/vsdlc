@@ -1,7 +1,6 @@
 $checks = @(
   @{ Path = "$HOME/.copilot/agents/va-pm.agent.md"; Label = "Agent va-pm" },
   @{ Path = "$HOME/.copilot/copilot-instructions.md"; Label = "Global instructions" },
-  @{ Path = "$HOME/.vscode-server-insiders/data/User/prompts/sdlc-int.prompt.md"; Label = "Prompt sdlc-int" },
   @{ Path = "$HOME/.copilot/templates/sdlc-project-template/.vscode/mcp.json"; Label = "Project MCP template" },
   @{ Path = "$HOME/.copilot/bin/sdlc-template-init"; Label = "Bootstrap script" }
 )

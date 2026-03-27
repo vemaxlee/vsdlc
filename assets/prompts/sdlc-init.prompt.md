@@ -9,7 +9,6 @@ agent: "va-pm"
 
 兼容命令入口:
 - `/sdlc-init`
-- `/sdlc-int` (等价别名)
 
 全局模板位置:
 - `~/.copilot/templates/sdlc-project-template/`
