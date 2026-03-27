@@ -1,0 +1,6 @@
+{
+    "version": 1,
+    "description": "SDLC session start hook placeholder",
+    "enabled": false,
+    "notes": "Reserved for future project-level hook automation."
+}

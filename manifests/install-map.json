@@ -1,0 +1,22 @@
+{
+  "agents": {
+    "source": "assets/agents",
+    "target": "~/.copilot/agents"
+  },
+  "prompts": {
+    "source": "assets/prompts",
+    "target": "~/.vscode-server-insiders/data/User/prompts"
+  },
+  "root": {
+    "source": "assets/root/copilot-instructions.md",
+    "target": "~/.copilot/copilot-instructions.md"
+  },
+  "template": {
+    "source": "assets/templates/sdlc-project-template",
+    "target": "~/.copilot/templates/sdlc-project-template"
+  },
+  "bin": {
+    "source": "assets/bin/sdlc-template-init",
+    "target": "~/.copilot/bin/sdlc-template-init"
+  }
+}

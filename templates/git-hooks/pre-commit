@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "[vsdlc] pre-commit check"
+
+if command -v git >/dev/null 2>&1; then
+  git diff --cached --check
+fi
+
+if [[ -f package.json ]]; then
+  if npm run -s lint >/dev/null 2>&1; then
+    npm run -s lint
+  fi
+fi

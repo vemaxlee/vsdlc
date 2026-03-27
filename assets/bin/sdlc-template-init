@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [[ $# -lt 1 ]]; then
+  echo "Usage: sdlc-template-init <target-dir> [project-name] [project-type] [tech-stack] [project-description]" >&2
+  exit 1
+fi
+
+TEMPLATE_DIR="${HOME}/.copilot/templates/sdlc-project-template"
+TARGET_DIR="$1"
+PROJECT_NAME="${2:-$(basename "$TARGET_DIR")}"
+PROJECT_TYPE="${3:-Web Application}"
+TECH_STACK="${4:-Custom Stack}"
+PROJECT_DESCRIPTION="${5:-SDLC project initialized from template}"
+TODAY="$(date +%F)"
+
+if [[ ! -d "$TEMPLATE_DIR" ]]; then
+  echo "Template directory not found: $TEMPLATE_DIR" >&2
+  exit 1
+fi
+
+mkdir -p "$TARGET_DIR"
+
+if [[ -n "$(find "$TARGET_DIR" -mindepth 1 -maxdepth 1 2>/dev/null | head -n 1)" ]]; then
+  echo "Target directory is not empty, template files may overwrite existing files: $TARGET_DIR"
+fi
+
+cp -R "$TEMPLATE_DIR"/. "$TARGET_DIR"/
+
+if [[ -d "$TARGET_DIR/.githooks" ]]; then
+  find "$TARGET_DIR/.githooks" -type f -exec chmod +x {} \;
+fi
+
+find "$TARGET_DIR" -type f \( -name "*.md" -o -name "*.example" -o -name ".gitignore" -o -path "*/hooks/*.json" \) -print0 | while IFS= read -r -d '' file; do
+  sed -i \
+    -e "s|{{PROJECT_NAME}}|$PROJECT_NAME|g" \
+    -e "s|{{PROJECT_TYPE}}|$PROJECT_TYPE|g" \
+    -e "s|{{TECH_STACK}}|$TECH_STACK|g" \
+    -e "s|{{PROJECT_DESCRIPTION}}|$PROJECT_DESCRIPTION|g" \
+    -e "s|{{TODAY}}|$TODAY|g" \
+    "$file"
+done
+
+if [[ ! -d "$TARGET_DIR/.git" ]]; then
+  git -C "$TARGET_DIR" init >/dev/null 2>&1 || true
+fi
+
+if [[ -d "$TARGET_DIR/.git" && -d "$TARGET_DIR/.githooks" ]]; then
+  git -C "$TARGET_DIR" config core.hooksPath .githooks || true
+fi
+
+echo "SDLC template initialized at: $TARGET_DIR"
